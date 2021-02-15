@@ -8,7 +8,16 @@ Rozwiązania zadań z kursu Bezpieczeństwo komputerowe na kierunku informatyka 
 Phishing
 
 ### Lista 5
-Strona banku, podmiana numeru konta
+Strona banku
+- podmiana numeru konta
 
 ### Lista 6
 Bezpieczeństwo niskopoziomowe
+
+### Lista 7
+Strona banku
+- SQL Injection
+- XSS
+- XSRF
+- rest API
+- token JWT

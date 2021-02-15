@@ -1,0 +1,33 @@
+{% extends 'baseTemplate.html' %}
+
+{% block content %}
+    <h3>Transfer create</h3>
+    <form method="post" action="{% url 'confirmTransfer' %}">
+        {% csrf_token %}
+        <table class="table table-bordered">
+            <tr>
+                <th>Recipient name : {{ form.recipientName}}</th>
+            </tr>
+            <tr>
+                <th>Recipient account : {{ form.recipientAccount}}</th>
+            </tr>
+            <tr>
+                <th>Title : {{ form.title}}</th>
+            </tr>
+            <tr>
+                <th>Amount : {{ form.amount}}</th>
+            </tr>
+            <tr>
+                <th>Date : {{ form.date}}</th>
+            </tr>
+        </table>
+        <button type="submit" id="sendButton">Send</button>
+    </form>
+
+    {% for message in messages %}
+        <p>
+            {{ message }}
+        </p>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+Login
+
+<form method="POST" action="">
+    {% csrf_token %}
+    Login <input type="text" name="username">
+    <br>
+    Password <input type="password" name="password">
+    <br>
+    <input type="submit" name="Create User">
+    {{ form.errors }}
+</form>
+
+{% for message in messages %}
+    <p>
+        {{ message }}
+    </p>
+{% endfor %}
+
+<p>
+    Don't have an account? <a href="{% url 'register' %}">Register</a>
+</p>
+
+<p>
+    Don't remember a password? <a href="{% url 'reset_password' %}">Reset password</a>
+</p>

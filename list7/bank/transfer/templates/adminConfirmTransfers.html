@@ -1,0 +1,31 @@
+{% extends 'baseTemplate.html' %}
+
+{% block content %}
+    <h3>Admin Transfer Confirm</h3>
+    <form method="post" action="{% url 'adminConfirm' %}">
+        {% csrf_token %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Recipient name</th>
+                    <th scope="col">Recipient account</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transfer in transfers %}
+                    <tr>
+                        <td>{{ transfer.recipientName | safe }}</td>
+                        <td>{{ transfer.recipientAccount | safe }}</td>
+                        <td>{{ transfer.title | safe }}</td>
+                        <td>{{ transfer.amount | safe }}</td>
+                        <td>{{ transfer.date | safe }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" id="sendTransferButton">Confirm all</button>
+    </form>
+{% endblock %}

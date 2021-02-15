@@ -1,0 +1,26 @@
+{% extends 'baseTemplate.html' %}
+
+{% block content %}
+    <h3>Transfer was sent</h3>
+    {% csrf_token %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Recipient name</th>
+                <th scope="col">Recipient account</th>
+                <th scope="col">Title</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ transfer.recipientName|safe }}</td>
+                <td id="recipientAccount">{{ transfer.recipientAccount }}</td>
+                <td>{{ transfer.title }}</td>
+                <td>{{ transfer.amount }}</td>
+                <td>{{ transfer.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
