@@ -9,3 +9,6 @@ Phishing
 
 ### Lista 5
 Strona banku, podmiana numeru konta
+
+### Lista 6
+Bezpieczeństwo niskopoziomowe
