@@ -4,3 +4,5 @@ Rozwiązania zadań z kursu Bezpieczeństwo komputerowe na kierunku informatyka 
 ### Lista 3
 Łamanie szyfru strumieniowego
 
+### Lista 4
+Phishing
